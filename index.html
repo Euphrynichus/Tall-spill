@@ -9,10 +9,14 @@
   <script>
     window.onload=oppstart;
     function oppstart (){
+      document.getElementById("skrivtall").onclick = gjett;
       let tall = Math.trunc((Math.random() *100)+1);
       document.getElementById("4").innerHTML = tall;
     }
-    attemts = 0
+    function gjett (){
+        let guessnumber = document.getElementById("skrivtall").value
+    }
+    attempts = 0
     guess = int(input("Gjett et tall mellom 1 og 100: "))
     attempts += 1
     function sjekkGjett(gjettetTall) {
