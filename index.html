@@ -8,7 +8,7 @@
   <script>
     window.onload=oppstart;
     function oppstart (){
-      let tall = (Math.random() *100) + 1.toFixed(0);
+      let tall = Math.trunc((Math.random() *100)+1);
 
       document.getElementById("4").innerHTML = tall;
     }
