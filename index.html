@@ -5,7 +5,7 @@
     <title>Hallo</title>
     <h1>Gjett et tall fra 1 til 100! </h1>
   </head>
-  
+
   <script>
     window.onload=oppstart;
     function oppstart (){
@@ -13,10 +13,22 @@
 
       document.getElementById("4").innerHTML = tall;
     }
+    function sjekkGjett(gjettetTall) {
+      if (gjettetTall === tilfeldigTall){
+        console.log("Du gjettet riktig!!");
+      }
+      else if (gjettetTall = < tilfeldigTall){
+        console.log("Tallet er høyere!")
+      }
+      else if (gjettetTall = > tilfeldigTall){
+        console.log("Tallet er lavere!")
+      }
+    }
   </script>
   <body>
 
     <h3>Et tilfeldig tall mellom 1 og 100:<span id="4"></span></h3>
+    
 
 
 
