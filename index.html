@@ -22,9 +22,7 @@
         guessnumber = parseInt(document.getElementById("skrivtall").value);
         console.log(guessnumber);
         attempts += 1;
-        if (attempts >= 10) {
-        document.getElementById("tilbakeMelding").innerHTML= "Du har brukt opp alle forsøkene dine";
-      }
+        
       sjekkGjett(guessnumber);
     }
     //guess = int(input("Gjett et tall mellom 1 og 100: "))
@@ -40,6 +38,9 @@
       }
       else if (gjettetTall > tilfeldigTall){
         document.getElementById("tilbakeMelding").innerHTML = "Tallet er lavere!"
+      }
+      if (attempts >= 10) {
+        document.getElementById("tilbakeMelding").innerHTML = "Du har brukt opp alle forsøkene dine";
       }
     }
     
