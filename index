@@ -2,11 +2,15 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+<<<<<<< HEAD
     <title>Hallo</title>
+=======
+    <title>tallspill</title>
+>>>>>>> cb6508d6ff8fc60726aa0d9f6d849d20cbb069f7
   </head>
   <body>
     <h1>Hello</h1>
-    dette er en test
+    dette er en test bl
 
   </body>
 </html>
