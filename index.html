@@ -8,31 +8,38 @@
 
   <script>
     var attempts = 0;
+    var guessnumber;
+    var tilfeldigTall = Math.trunc((Math.random() * 100) + 1);
     window.onload=oppstart;
     function oppstart (){
       
       document.getElementById("knapp").onclick = gjett;
-      let tall = Math.trunc((Math.random() *100)+1);
+      
       //document.getElementById("4").innerHTML = tall;
     }
     
     function gjett (){
-        let guessnumber = document.getElementById("skrivtall").value;
+        guessnumber = parseInt(document.getElementById("skrivtall").value);
+        console.log(guessnumber);
         attempts += 1;
         if (attempts >= 10) {
-        console.log("Du har brukt opp alle forsøkene dine")
+        document.getElementById("tilbakeMelding").innerHTML= "Du har brukt opp alle forsøkene dine";
       }
+      sjekkGjett(guessnumber);
     }
     //guess = int(input("Gjett et tall mellom 1 og 100: "))
-    function sjekkGjett(gjettetTall) {
+    function sjekkGjett(gjettetTall)
+    {
+      console.log(gjettetTall);
       if (gjettetTall === tilfeldigTall){
-        console.log("Du gjettet riktig!!");
+        document.getElementById("tilbakeMelding").innerHTML= "Du gjettet riktig!!"
       }
       else if (gjettetTall < tilfeldigTall){
-        console.log("Tallet er høyere!")
+        document.getElementById("tilbakeMelding").innerHTML = "Tallet er høyere!"
+       
       }
       else if (gjettetTall > tilfeldigTall){
-        console.log("Tallet er lavere!")
+        document.getElementById("tilbakeMelding").innerHTML = "Tallet er lavere!"
       }
     }
     
@@ -41,8 +48,7 @@
 
     <input id="skrivtall" type="number" min="1" max="100">
     <button id="knapp">Sjekk!</button>
-
-
-
+    <p id="tilbakeMelding"></p>
+  
   </body>
 </html>
