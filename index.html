@@ -10,9 +10,11 @@
     window.onload=oppstart;
     function oppstart (){
       let tall = Math.trunc((Math.random() *100)+1);
-
       document.getElementById("4").innerHTML = tall;
     }
+    attemts = 0
+    guess = int(input("Gjett et tall mellom 1 og 100: "))
+    attempts += 1
     function sjekkGjett(gjettetTall) {
       if (gjettetTall === tilfeldigTall){
         console.log("Du gjettet riktig!!");
@@ -27,7 +29,7 @@
   </script>
   <body>
 
-    <h3>Et tilfeldig tall mellom 1 og 100:<span id="4"></span></h3>
+   
     <button id="knapp">Sjekk!</button>
 
 
