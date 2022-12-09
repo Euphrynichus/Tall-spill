@@ -11,14 +11,14 @@
     function oppstart (){
       document.getElementById("skrivtall").onclick = gjett;
       let tall = Math.trunc((Math.random() *100)+1);
-      document.getElementById("4").innerHTML = tall;
+      //document.getElementById("4").innerHTML = tall;
     }
     function gjett (){
-        let guessnumber = document.getElementById("skrivtall").value
+        let guessnumber = document.getElementById("skrivtall").value;
+        attempts += 1;
     }
     attempts = 0
-    guess = int(input("Gjett et tall mellom 1 og 100: "))
-    attempts += 1
+    //guess = int(input("Gjett et tall mellom 1 og 100: "))
     function sjekkGjett(gjettetTall) {
       if (gjettetTall === tilfeldigTall){
         console.log("Du gjettet riktig!!");
