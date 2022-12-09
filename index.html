@@ -7,17 +7,22 @@
   </head>
 
   <script>
+    var attempts = 0;
     window.onload=oppstart;
     function oppstart (){
-      document.getElementById("skrivtall").onclick = gjett;
+      
+      document.getElementById("knapp").onclick = gjett;
       let tall = Math.trunc((Math.random() *100)+1);
       //document.getElementById("4").innerHTML = tall;
     }
+    
     function gjett (){
         let guessnumber = document.getElementById("skrivtall").value;
         attempts += 1;
+        if (attempts >= 10) {
+        console.log("Du har brukt opp alle forsøkene dine")
+      }
     }
-    attempts = 0
     //guess = int(input("Gjett et tall mellom 1 og 100: "))
     function sjekkGjett(gjettetTall) {
       if (gjettetTall === tilfeldigTall){
@@ -30,9 +35,7 @@
         console.log("Tallet er lavere!")
       }
     }
-    if (attempts >=10){
-    console.log("Du har brukt opp alle forsøkene dine")
-    }
+    
   </script>
   <body>
 
